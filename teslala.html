@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Cars</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showHome()">Home</a></li>
+                <li><a href="#" onclick="showModels()">Models</a></li>
+                <li><a href="#" onclick="showPowerwall()">Powerwall</a></li>
+                <li><a href="#">Solar</a></li>
+                <li><a href="#">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="hero" id="mainContent">
+        <div class="hero-content">
+            <h1>Drive the Future</h1>
+            <p>Explore our electric vehicles and sustainable energy solutions</p>
+            <button>Learn More</button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature-item">
+            <h2>Electric Performance</h2>
+            <p>Instant torque, incredible speed, and zero emissions</p>
+        </div>
+        <div class="feature-item">
+            <h2>Autopilot</h2>
+            <p>Drive with confidence using Tesla's advanced autopilot technology</p>
+        </div>
+        <div class="feature-item">
+            <h2>Supercharging</h2>
+            <p>Get on the road quickly with our fast and convenient Supercharger network</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Electric Cars. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+    /* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #111;
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav li {
+    padding: 10px;
+}
+
+.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+.hero button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #e82127;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background-color: #ff3c3c;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    background-color: #111;
+    padding: 50px 0;
+}
+
+.feature-item {
+    text-align: center;
+    width: 30%;
+}
+
+.feature-item h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+}
+
+</style>
+
+<script>
+    function showHome() {
+        const mainContent = document.getElementById('mainContent');
+        mainContent.innerHTML = `
+            <div class="hero-content">
+                <h1>Drive the Future</h1>
+                <p>Explore our electric vehicles and sustainable energy solutions</p>
+                <button>Learn More</button>
+            </div>
+        `;
+    }
+    
+    function showModels() {
+        const mainContent = document.getElementById('mainContent');
+        mainContent.innerHTML = `
+            <div class="models-content">
+                <h1>Our Models</h1>
+                <p>Discover the latest electric vehicles, designed for performance, efficiency, and sustainability.</p>
+                <ul>
+                    <li>Model S</li>
+                    <li>Model 3</li>
+                    <li>Model X</li>
+                    <li>Model Y</li>
+                </ul>
+            </div>
+        `;
+    }
+    
+    function showPowerwall() {
+        const mainContent = document.getElementById('mainContent');
+        mainContent.innerHTML = `
+            <div class="powerwall-content">
+                <h1>Powerwall</h1>
+                <p>Store solar energy and power your home with the Tesla Powerwall. Keep your home powered even during outages.</p>
+                <button>Learn More</button>
+            </div>
+        `;
+    }
+    
+</script>
